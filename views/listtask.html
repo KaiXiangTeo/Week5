@@ -1,0 +1,45 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+    <style>
+        table,th,td{
+            border : 2px solid black;
+        }
+        body{
+            background-color:lightblue;
+        }
+    </style>
+    <font size="5px">
+
+</head>
+
+<body>
+     <p>
+        <a href="/">Home</a>
+        <a href="/newtask">Add new Task</a>
+    </p>
+    <img src="list.png" />
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Task Name</th>
+            <th>Task Due Date</th>
+            <th>Task Description</th>
+        </tr>
+        <% for (let i =0;i<tasks.length;i++){ %>
+            <tr>
+                <td>
+                    <%= tasks[i].TaskName %>
+                </td>
+                <td>
+                    <%= tasks[i].TaskDue %>
+                </td>
+                <td>
+                    <%= tasks[i].TaskDesc %>
+                </td>
+            </tr>
+            <% }%>
+    </table>
+   
+   
+</body>
+</html>
