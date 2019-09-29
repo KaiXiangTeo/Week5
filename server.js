@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 
-app.use(bodyParser.json())
+app.use(bodyParser.json()) //tells the system that you want json to be used.
 
 app.engine("html",require('ejs').renderFile);
 app.set('view engine',"html");
@@ -33,7 +33,8 @@ app.post('/addtask',function(req,res){
 
 app.get("/listtask",function(req,res){ 
     res.render("listtask.html",{    //render file must in "views"
-        tasks:db
+        tasks:db,
+        name:"myname"
     });
 })
 app.listen(8080);
