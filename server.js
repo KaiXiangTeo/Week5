@@ -27,7 +27,8 @@ app.get("/newtask",function(req,res){
 app.post('/addtask',function(req,res){
     db.push(req.body)
     res.render("listtask.html",{    //render file must in "views"
-        tasks:db
+        tasks:db,
+        name:"myname"
     });
 })
 
